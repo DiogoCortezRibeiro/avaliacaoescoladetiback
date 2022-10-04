@@ -22,7 +22,7 @@ public class Imovel {
     @Column(name = "endereco")
     private String endereco;
 
-    @OneToMany(mappedBy = "imovel")
+    @ManyToOne()
     private List<Comodo> comodos;
 
     public LocalDate getDatacompra() {

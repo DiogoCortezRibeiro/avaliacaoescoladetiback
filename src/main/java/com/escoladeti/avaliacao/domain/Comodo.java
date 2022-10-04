@@ -13,6 +13,8 @@ public class Comodo {
 
     private String nome;
 
+    private Imovel imovel;
+
     public Long getId() {
         return id;
     }
@@ -20,8 +22,4 @@ public class Comodo {
     public String getNome() {
         return nome;
     }
-
-    @ManyToOne(optional=false)
-    @JoinColumn(name = "id", insertable=false, updatable=false)
-    public Imovel imovel;
 }

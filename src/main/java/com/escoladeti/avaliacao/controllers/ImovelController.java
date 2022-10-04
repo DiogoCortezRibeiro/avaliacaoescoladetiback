@@ -41,7 +41,7 @@ public class ImovelController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity deletar(@PathVariable("id") Long id) {
-        return imovelService.deletarPorId(id);
+    public void deletar(@PathVariable("id") Long id) {
+        imovelService.deletarPorId(id);
     }
 }

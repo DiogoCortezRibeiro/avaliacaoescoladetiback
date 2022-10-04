@@ -53,10 +53,9 @@
         <createSequence sequenceName="comodo_id_seq" />
     </changeSet>
 
-    <changeSet author="diogo.cortez" id="26">
-        <addForeignKeyConstraint
-                baseTableName="comodo" constraintName="imovel_fk"
-                baseColumnNames="imovel_id" referencedTableName="imovel"
+    <changeSet author="diogo.cortez" id="7">
+        <addForeignKeyConstraint baseTableName="comodo" constraintName="imovel_fk"
+                                 baseColumnNames="imovel_id" referencedTableName="imovel"
                 referencedColumnNames="id" onDelete="CASCADE" onUpdate="CASCADE" />
     </changeSet>
 
