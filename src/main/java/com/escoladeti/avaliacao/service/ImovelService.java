@@ -26,6 +26,7 @@ public class ImovelService {
     }
 
     public void deletarPorId(Long id) {
+
         imovelRepository.deleteById(id);
     }
 }

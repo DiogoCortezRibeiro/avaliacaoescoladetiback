@@ -1,5 +1,7 @@
 package com.escoladeti.avaliacao.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
@@ -22,7 +24,8 @@ public class Imovel {
     @Column(name = "endereco")
     private String endereco;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "imovel_id")
     private List<Comodo> comodos;
 
     public LocalDate getDatacompra() {

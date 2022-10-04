@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/comodo")
+@CrossOrigin
 public class ComodoController {
 
     @Autowired

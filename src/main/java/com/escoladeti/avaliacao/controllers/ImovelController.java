@@ -11,14 +11,15 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/imovel")
+@CrossOrigin
 public class ImovelController {
 
     @Autowired
     private ImovelService imovelService;
 
     @GetMapping
-    public List<Imovel> buscarTodos() {
-        return imovelService.buscarTodosImovel();
+    public ResponseEntity buscarTodos() {
+        return new ResponseEntity(imovelService.buscarTodosImovel(), HttpStatus.OK);
     }
 
     @PostMapping

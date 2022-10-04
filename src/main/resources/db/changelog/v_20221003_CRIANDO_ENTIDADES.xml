@@ -39,9 +39,7 @@
             <column name="nome" type="VARCHAR(100)">
                 <constraints nullable="false" />
             </column>
-            <column name="imovel_id" type="INTEGER">
-                <constraints nullable="false" />
-            </column>
+            <column name="imovel_id" type="INTEGER"></column>
         </createTable>
     </changeSet>
 
