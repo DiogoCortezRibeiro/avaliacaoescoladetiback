@@ -51,4 +51,8 @@ public class Imovel {
     public void removeComodo(Comodo comodo) {
         this.comodos.remove(comodo);
     }
+
+    public List<Comodo> getComodos() {
+        return comodos;
+    }
 }
