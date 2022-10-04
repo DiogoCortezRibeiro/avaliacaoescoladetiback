@@ -20,4 +20,12 @@ public class ComodoService {
     public Comodo cadastrar(Comodo comodo) {
         return comodoRepository.save(comodo);
     }
+
+    public Comodo atualizar(Comodo comodo) {
+        return comodoRepository.save(comodo);
+    }
+
+    public void deletarPorId(Long id) {
+        comodoRepository.deleteById(id);
+    }
 }

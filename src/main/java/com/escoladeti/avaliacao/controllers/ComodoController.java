@@ -1,6 +1,7 @@
 package com.escoladeti.avaliacao.controllers;
 
 import com.escoladeti.avaliacao.domain.Comodo;
+import com.escoladeti.avaliacao.domain.Imovel;
 import com.escoladeti.avaliacao.service.ComodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,5 +30,19 @@ public class ComodoController {
         }
 
         return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity atualizar(@RequestBody Comodo comodo, @PathVariable("id") Long id) {
+        if(comodoService.atualizar(comodo) != null) {
+            return new ResponseEntity(comodo, HttpStatus.OK);
+        }
+
+        return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deletar(@PathVariable("id") Long id) {
+        comodoService.deletarPorId(id);
     }
 }

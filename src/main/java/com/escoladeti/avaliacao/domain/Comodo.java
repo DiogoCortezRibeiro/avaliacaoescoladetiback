@@ -13,7 +13,7 @@ public class Comodo {
 
     private String nome;
 
-    private Imovel imovel;
+    private Long imovel_id;
 
     public Long getId() {
         return id;
@@ -21,5 +21,9 @@ public class Comodo {
 
     public String getNome() {
         return nome;
+    }
+
+    public Long getImovel_id() {
+        return imovel_id;
     }
 }
